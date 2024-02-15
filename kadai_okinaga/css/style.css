@@ -25,29 +25,25 @@ body{
     font-family: "游ゴシック体", YuGothic, "游ゴシック Medium",
       "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
     font-weight: bold;
+    font-size: 18px;
 }
 .header_inner h1{
     width: 227px;
 }
 
 /* メイン */
-.main_text
-.main_text2
-.menu_inner{
+.main{
     margin: auto;
     max-width: 1000px;
 }
-.main{
-    max-width: 100%;
-}
+
 .main_text{
     font-size: 30px;
     line-height: 1.75;
     margin-top: 110px;
     text-align: center;
     margin-bottom: 65px;
-    box-sizing: border-box;
-    
+    max-width: 1000px
 }
 h2{
     font-size: 82px;
@@ -69,13 +65,15 @@ h2{
 }
 
 /*ABOUT US 私たちについて */
+#aboutus{
+    max-width: 1000px;
+    margin: auto;
+}
 .aboutus_wrapper{
     display: flex;
-    justify-content: center;
-
+    margin: 0px 10px;
 }
-h3{
-    width: 275px;
+h3{ width: 275px;
 }
 .subtitle_text{
 width: 410px;
@@ -83,34 +81,33 @@ margin-top: 40px;
 line-height: 1.625;
 }
 .aboutus_inner{
-    margin-top: 100px;
     margin-left: 80px;
 }
-
-.aboutus_img{
-    /* width: 496px; */
-    height: 560px;
+.about_us{
+    width: 50%;
+}
+.aboutus_img img{
     object-fit: cover;
-    border-bottom-right-radius: 30px;
-
+    border-bottom-right-radius: 50px;
 }
 .abutuslogo_img{
     width: 275px;
-    position: relative;
-    right: 137px;
-    top: -70px;
 }
 .subtitle{
     font-size: 44px;
     line-height: 1.3863;
-    width: 352;
+    /* width: 352px; */
+    margin-top: 60px;
 }
 .subtitle p{
     font-size: 16px;
     width: 410px;
-    
 }
 /* MENU メニュー */
+#menu{
+    max-width: 1000px;
+    margin: auto;
+} 
 h4{
     width: 151px;
     margin: auto;
@@ -119,18 +116,13 @@ h4{
 }
 .menu_detail img{
     border-top-right-radius: 50px;
-
-    
 }
 .menu_wrapper{
     display: flex;
     justify-content: space-between;
-    margin: auto;
+    margin: 0px 10px 0px 10px;
     gap: 20px;
     max-width: 1000px;
-}
-.sub_menu{
-    /* position: relative  */
 }
     
 .sub_menu_inner{
@@ -147,10 +139,7 @@ h4{
 .menu_detail jpg{
     object-fit: cover;
     border-bottom-right-radius: 50px
-
 }
-
-
 
 /* フォトギャラリー GALLERY */
 h5 {
@@ -159,14 +148,19 @@ h5 {
     margin-bottom: 26px;
     margin-top: 100px;
 }
-
 .gallery_inner{
     display: flex;
-    width: 100%;
+}
+.gallery_inner img{
+    display: flex;
+    width: 20%;
 }
 
-
 /* イベント情報 */
+#event{
+    max-width: 1000px;
+    margin: auto;
+}
 h6{
     width: 173px;
     margin: auto;
@@ -174,42 +168,31 @@ h6{
     margin-bottom: 40px;
 }
 .event_inner nav{
-    max-width: 1000px;
-    margin: auto;
     background-color: #fff;
-    padding-top: 45px;
-    padding-left: 163px;
-    padding-right: 169px;
-    padding-bottom: 45px;
     border: solid 4px #4f260b;
-   
-
-}
-
-ul div{
-    display: flex;
-    
-    
+    box-sizing: border-box;
+    margin: 0px 10px;
 }
 ul{
+    margin: 40px 0px;
+}
+li{
+    display: flex;
     font-size: 23px;
-    align-items: center;
-    max-width: 1000px;
-}
-ul div p{
+    gap: 50px;
+    max-width: 700px;
+    margin: 0 auto;
     line-height: 1.95;
-    padding-bottom: solid 1px #4f260b;
-    border: bottom 1px #4f260b;
-}
-.nav ul li{
     line-height: 1.95;
     text-align: center;
-    
+}
+li p{
+    line-height: 1.9565;
+}
+span{
+    border-bottom: solid 1px #4f260b;
 }
 
-.event_inner{
-    
-}
 /* アクセス MAP */
 .acesslogo{
     width: 213px;
@@ -217,47 +200,43 @@ ul div p{
     margin: auto;
     margin-top: 80px;
     margin-bottom: 47px;
-    
 }
 .googlmap{
     width: 100%;
     margin: auto;
     text-align: center;
     filter: grayscale(100%) invert(92%) contrast(83%);
-
-
 }
+.googlmap iframe{
+    width: 100%;
+}
+
 /* フッター */
 .footer{
     max-width: 100%;
     background-color: none;
     font-size: 12px;
     background-color: #fff;
+    display: flex;
 }
-.fotter_inner img{
+.footer_inner img{
     width: 226px;
     height: 50px;
-
 }
-.fotter_inner{
+.footer_inner{
     display: flex;
     margin: auto;
     max-width: 1000px;
     margin-top: 85px;
-    /* background-color: white */
 }
 .adress{
     margin-left: 65px;
-
 }
 .adress p{
     color: black;
     line-height: 1.95; 
 }
 
-.footer{
-    display: flex;
-}
 
 /* トップに戻るボタン */
 .totoptpbtn{
@@ -269,15 +248,12 @@ ul div p{
 
 /* コピーライト */
 .copyright{
-    /* width: 100%; */
-    /* margin-top: 80px; */
     padding-top: 80px;
     padding-bottom: 80px;
     text-align: center;
     color: black;
     background-color: white;
     font-size: 16px;
-    /* margin: 80px; */
 }
 
 
