@@ -9,6 +9,8 @@
     <!-- css読み込み -->
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <!-- jquery読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -22,16 +24,33 @@
             </h1>
             <nav class="header_nav">
                 <ul>
-                    <li><a href="#aboutus"></a>ABOUT US</li>
-                    <li><a href="#menu"></a>MENU</li>
-                    <li><a href="#gallery"></a>GALLERY</li>
-                    <li><a href="#event"></a>EVENT</li>
-                    <li><a href="#access"></a>ACCESS</li>
+                    <li><a href="#aboutus">ABOUT US</a></li>
+                    <li><a href="#menu">MENU</a></li>
+                    <li><a href="#gallery">GALLERY</a></li>
+                    <li><a href="#event">EVENT</a></li>
+                    <li><a href="#access">ACCESS</a></li>
                 </ul>
             </nav>
         </div>
+        <div class="hamburger">
+            <span></span>
+        </div>
+
+        <!-- SP用 -->
+        <nav class="header_nav-sp">
+            <ul>
+                <li><a href="#aboutus">ABOUT US</a></li>
+                <li><a href="#menu"></a>MENU</li>
+                <li><a href="#gallery">GALLERY</a></li>
+                <li><a href="#event">EVENT</a></li>
+                <li><a href="#access">ACCESS</a></li>
+            </ul>
+        </nav>
         <div class="slider">
-            <img src="./images/pc_first-100.jpg" alt="カフェ店内の様子の写真">
+            <picture>
+                <source srcset="./images/about_us@2x-100.jpg" media="(max-width: 767px)">
+                <img src="./images/pc_first-100.jpg" alt="カフェ店内の様子の写真">
+            </picture>
         </div>
     </header>
 
@@ -43,16 +62,23 @@
             <p class="main_text2">毎日を丁寧に大切に過ごしたい。だからこそ一杯一杯丁寧にコーヒーを入れ<br>
                 足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。
             </p>
+            <p class="main_text2-sp">毎日を丁寧に大切に過ごしたい。<br>だからこそ一杯一杯丁寧にコーヒーを入れ<br>
+                足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。
+            </p>
         </div>
     </section>
 
     <!--私たちについて-->
     <section id="aboutus">
         <div class="aboutus_wrapper">
-            <p class="aboutus_img"><img src="./images/pc_about-100.jpg" alt="デザインカプチーノ画像"></p>
+            <p class="aboutus_img">
+                <picture>
+                    <img src="./images/pc_about-100.jpg" alt="デザインカプチーノ画像">
+                </picture>
+            </p>
             <div class="aboutus_inner">
                 <h3>
-                    <p class="abutuslogo_img"><img src="./images/about_us@2x.png" alt="ロゴ"></p>
+                    <p class="aboutuslogo_img"><img src="./images/about_us@2x.png" alt="ロゴ"></p>
                 </h3>
                 <p class="subtitle">私たちが提供する<br>こだわりのコーヒー</p>
                 <p class="subtitle_text">
@@ -62,9 +88,29 @@
         </div>
     </section>
 
+    <!-- 私たちについて SP用 -->
+    <section id="aboutus-sp">
+        <div class="aboutus-sp_wrapper">
+            <h3>
+                <p class="aboutuslogo-sp_img"><img src="./images/about_us@2x.png" alt="ロゴ"></p>
+            </h3>
+            <p class="aboutus-sp_img">
+                <picture>
+                    <img src="./images/about_us@2x-100.jpg" alt="デザインカプチーノ画像">
+                </picture>
+            </p>
+            <div class="aboutus-sp_inner">
+                <p class="subtitle-sp">私たちが提供する<br>こだわりのコーヒー</p>
+                <p class="subtitle_text-sp">
+                    サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
+                </p>
+            </div>
+        </div>
+    </section>
+
     <!-- メニュー-->
     <section id="menu">
-        <h4><img src="./images/menu@2x.png" alt="メニュー"></h4>
+        <h3><img src="./images/menu@2x.png" alt="メニュー"></h3>
 
         <div class="menu_wrapper">
             <div class="menu_detail">
@@ -96,7 +142,7 @@
 
     <!--フォトギャラリー GALLERY-->
     <section id="gallery">
-        <h5><img src="./images/gallery@2x.png" alt="フォトギャラリー画像"></h5>
+        <h3><img src="./images/gallery@2x.png" alt="フォトギャラリー画像"></h3>
         <div class="gallery_inner">
             <img src="./images/pc_gallary_05-100.jpg" alt="店内様子画像">
             <img src="./images/pc_gallary_04-100.jpg" alt="コーヒー豆画像">
@@ -104,25 +150,26 @@
             <img src="./images/pc_gallary_02-100.jpg" alt="店内雰囲気画像">
             <img src="./images/pc_gallary_01-100.jpg" alt="デザインカプチーノ画像">
         </div>
+        <div class="gallery_inner-sp"><img src="./images/pc_gallary_03-100.jpg" alt="店内様子画像"></div>
     </section>
 
     <!--イベント情報  -->
     <section id="event">
-        <h6><img src="./images/event@2x.png" alt="イベントロゴ"></h6>
+        <h3><img src="./images/event@2x.png" alt="イベントロゴ"></h3>
         <div class="event_inner">
             <nav>
                 <ul>
                     <li>
                         <p>2020.06.23</p>
-                        <p><span>7月はイベント出店のため0/0お休みします</span></p>
+                        <p class="news"><span>7月はイベント出店のため0/0お休みします</span></p>
                     </li>
                     <li>
                         <p>2020.03.15</p>
-                        <p><span>春の新商品新発売。話題のあのブランドとコラボ</span></p>
+                        <p class="news"><span>春の新商品新発売。話題のあのブランドとコラボ</span></p>
                     </li>
                     <li>
                         <p>2020.02.06</p>
-                        <p><span>コーヒーの日で30％OFFイベントを開催［3日間限定］</span></p>
+                        <p class="news"><span>コーヒーの日で30％OFFイベントを開催［3日間限定］</span></p>
                     </li>
                 </ul>
             </nav>
@@ -131,8 +178,10 @@
 
     <!-- アクセス MAP-->
     <section id="access">
-        <div class="acesslogo">
-            <img src="./images/access@2x.png" alt="アクセスロゴ">
+        <div class="accesslogo">
+            <h3>
+                <img src="./images/access@2x.png" alt="アクセスロゴ">
+            </h3>
         </div>
         <div class="googlmap">
             <iframe
@@ -154,23 +203,32 @@
                         東京都渋谷区東京南123デザインビルB1 <br>
                         MAIL：info@designcafe.tokyo
                     </p>
-
                 </div>
             </div>
+            <!-- コピーライト -->
         </div>
+        <p class="copyright">
+            © 2021 DESIGN CAFE
+        </p>
     </section>
-
     <!-- トップに戻るボタン -->
+
     <div class="totoptpbtn">
         <p>
             <a href="header"><img src="./images/to_top@2x.png" alt="トップに戻る"></a>
         </p>
     </div>
 
-    <!-- コピーライト -->
-    <p class="copyright">© 2021 DESIGN CAFE</p>
+    <!-- jquery読み込み -->
+    <script>
+        $(function () {
+            $(".hamburger").on("click", function () {
+                $(".hamburger").toggleClass("open");
+                $(".header_nav-sp").fadeToggle();
+            });
+        });
 
-    </div>
+    </script>
 
 </body>
 
