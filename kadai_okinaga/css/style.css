@@ -175,10 +175,10 @@ line-height: 1.625;
     box-sizing: border-box;
     margin: 0px 10px;
 }
-ul{
+.event_inner nav ul{
     margin: 40px 0px;
 }
-li{
+.event_inner nav li{
     display: flex;
     font-size: 23px;
     max-width: 700px;
@@ -209,12 +209,10 @@ li p{
 }
 
 .googlmap iframe{
-    /* width: 100%; */
+    width: 100%;
     margin: auto;
     text-align: center;
     filter: grayscale(100%) invert(92%) contrast(83%);
-    margin: 0 calc(50% - 50vw);
-    width: 100vw;
     vertical-align: bottom;
 }
 
@@ -261,6 +259,7 @@ li p{
     color: black;
     background-color: white;
     font-size: 16px;
+    padding-bottom: 80px;
 }
 
 /* 1100px以下はここから読み込む */
@@ -272,7 +271,7 @@ li p{
 }
 
 @media screen and (max-width:1100px){
-    .header_nav{
+    .header_nav-sp{
         display: none;
 }
 
@@ -346,7 +345,10 @@ li p{
     "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
     font-weight: bold;
 }
-/* 1100px以下 メイン */
+/* 1100px以下はここから読み込む　メイン */
+.header_nav{
+    display: none;
+}
 .main_text{
     font-size: 26px;
     margin-top: 42px;
@@ -358,7 +360,8 @@ h2{
 .subtitle{
     font-size: 40px;
 }
-.main_text2-sp{
+.main_text2-sp
+.header_nav{
     display: none;
 }
 }
@@ -366,6 +369,7 @@ h2{
 @media screen and (max-width:767px){
  
 /* SP ヘッダー */
+
 .header_inner h1{
     width: 49.8%;
 }   
@@ -550,7 +554,7 @@ h2{
 }
 /* SP コピーライト */
 .copyright{
-    margin-bottom: 33px;
+    padding-bottom: 33px;
     text-align: center;
     color: black;
     background-color: white;
